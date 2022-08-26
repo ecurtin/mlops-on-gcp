@@ -14,8 +14,6 @@
 
 FROM python:3.8.2-slim
 
-RUN pip install PyMySQL google-cloud-storage && \
-    pip install protobuf==3.20.* \
-    pip install mlflow[extras]==1.13.1
+RUN pip install PyMySQL google-cloud-storage mlflow[extras]==1.28.0
 
 ENTRYPOINT ["mlflow", "server"]
